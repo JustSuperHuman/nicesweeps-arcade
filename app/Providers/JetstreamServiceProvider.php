@@ -2,16 +2,16 @@
 
 namespace App\Providers;
 
+use Laravel\Jetstream\Jetstream;
 use App\Actions\Jetstream\DeleteUser;
 use Illuminate\Support\ServiceProvider;
-use Laravel\Jetstream\Jetstream;
 
 class JetstreamServiceProvider extends ServiceProvider
 {
     /**
      * Register any application services.
      */
-    public function register(): void
+    public function register() : void
     {
         //
     }
@@ -19,7 +19,7 @@ class JetstreamServiceProvider extends ServiceProvider
     /**
      * Bootstrap any application services.
      */
-    public function boot(): void
+    public function boot() : void
     {
         $this->configurePermissions();
 
@@ -29,7 +29,7 @@ class JetstreamServiceProvider extends ServiceProvider
     /**
      * Configure the permissions that are available within the application.
      */
-    protected function configurePermissions(): void
+    protected function configurePermissions() : void
     {
         Jetstream::defaultApiTokenPermissions(['read']);
 
