@@ -43,7 +43,7 @@ php artisan migrate --seed
 Install the frontend dependencies:
 
 ```bash
-yarn && yarn dev
+npm install && npm run dev
 ```
 
 ## Testing

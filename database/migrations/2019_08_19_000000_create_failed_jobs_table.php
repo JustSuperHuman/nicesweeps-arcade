@@ -6,10 +6,7 @@ use Illuminate\Database\Migrations\Migration;
 
 return new class extends Migration
 {
-    /**
-     * Run the migrations.
-     */
-    public function up() : void
+    public function up()
     {
         Schema::create('failed_jobs', function (Blueprint $table) {
             $table->id();
@@ -22,10 +19,7 @@ return new class extends Migration
         });
     }
 
-    /**
-     * Reverse the migrations.
-     */
-    public function down() : void
+    public function down()
     {
         Schema::dropIfExists('failed_jobs');
     }
