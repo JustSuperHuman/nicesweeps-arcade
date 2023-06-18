@@ -43,7 +43,13 @@ php artisan migrate --seed
 Install the frontend dependencies:
 
 ```bash
-npm install && npm run dev
+npm install
+```
+
+Build the frontend assets:
+
+```bash
+npm run dev
 ```
 
 ## Testing
