@@ -1,11 +1,11 @@
-name: Tests
+name: Run Tests
 
 on:
   push:
   pull_request:
 
 jobs:
-  tests:
+  run-tests:
     runs-on: ubuntu-latest
 
     services:
