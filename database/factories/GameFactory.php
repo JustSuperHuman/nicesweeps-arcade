@@ -12,7 +12,7 @@ class GameFactory extends Factory
     public function definition() : array
     {
         return [
-            'title' => fake()->sentence(),
+            'name' => fake()->sentence(3, true),
             'description' => fake()->paragraph(),
         ];
     }

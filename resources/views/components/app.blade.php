@@ -24,7 +24,7 @@
 
         @stack('head')
     </head>
-    <body {{ $attributes->merge(['class' => 'bg-gradient-to-r from-[#060a2f] to-[#0e174c]']) }}>
+    <body {{ $attributes->merge(['class' => 'bg-gradient-to-r from-[#060a2f] to-[#0e174c] text-white']) }}>
         <div class="bg-white/[.02] text-white">
             <nav class="container max-w-screen-md py-8">
                 <ul class="flex items-center justify-end gap-16">
