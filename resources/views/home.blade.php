@@ -10,7 +10,7 @@
             <div class="grid grid-cols-2 gap-4 mt-4">
                 @foreach ($highlighted_games as $game)
                     <a href="#" class="flex items-end p-4 rounded-xl aspect-video {{ $bgColors->random() }}">
-                        <div class="font-semibold text-xl/6">{{ $game->name }}</div>
+                        <div class="font-semibold text-lg/5">{{ $game->name }}</div>
                     </a>
                 @endforeach
             </div>
