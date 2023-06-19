@@ -1,6 +1,6 @@
 <x-app>
     <div class="container max-w-screen-md py-16 text-white">
-        <h1 class="text-3xl font-bold text-center uppercase">Register</h1>
+        <h1 class="text-3xl text-center">Create an account</h1>
 
         <form method="POST" action="{{ route('register') }}" class="grid gap-4 mt-8">
             @csrf

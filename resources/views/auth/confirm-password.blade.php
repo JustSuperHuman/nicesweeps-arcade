@@ -1,6 +1,6 @@
 <x-app>
     <div class="container max-w-screen-md py-16 text-white">
-        <h1 class="text-3xl font-bold text-center uppercase">Confirm your password</h1>
+        <h1 class="text-3xl text-center">Confirm your password</h1>
 
         <form method="POST" action="{{ route('login') }}" class="grid gap-4 mt-8">
             @csrf
