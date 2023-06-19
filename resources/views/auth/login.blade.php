@@ -7,7 +7,7 @@
 
             <div>
                 <label for="email">Email</label>
-                <input type="email" name="email" id="email" placeholder="johnsmith@example.com" class="block w-full px-4 py-3 mt-1 text-gray-600 placeholder-gray-300 rounded" />
+                <input type="email" name="email" id="email" placeholder="johnsmith@example.com" required class="block w-full px-4 py-3 mt-1 text-gray-600 placeholder-gray-300 rounded" />
                 @error('email')
                     <span class="inline-block mt-2 text-red-400">{{ $message }}</span>
                 @enderror
@@ -15,19 +15,19 @@
 
             <div>
                 <label for="password">Password</label>
-                <input type="password" name="password" id="password" class="block w-full px-4 py-3 mt-1 text-gray-600 placeholder-gray-300 rounded" />
+                <input type="password" name="password" id="password" required class="block w-full px-4 py-3 mt-1 text-gray-600 placeholder-gray-300 rounded" />
                 @error('password')
                     <span class="inline-block mt-2 text-red-400">{{ $message }}</span>
                 @enderror
             </div>
 
-            <button class="px-4 py-3 mt-4 font-semibold uppercase rounded-md bg-gradient-to-r from-blue-600 to-blue-700">
+            <x-forms.submit>
                 Log in
-            </button>
+            </x-forms.submit>
         </form>
 
-        <p class="pt-8 mt-16 text-center border-t border-white/5">
-            <a href="{{ route('password.email') }}">I forgot my password.</a>
-        </p>
+        <div class="mt-16 bg-[#0d184b] p-4 rounded text-center">
+            Did you forget your password? <a href="{{ route('password.email') }}" class="text-blue-300">Ask for a new one.</a>
+        </div>
     </div>
 </x-app>

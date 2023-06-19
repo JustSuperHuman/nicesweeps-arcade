@@ -7,7 +7,7 @@
 
             <div>
                 <label for="name">Name</label>
-                <input type="text" name="name" id="name" placeholder="John Smith" class="block w-full px-4 py-3 mt-1 placeholder-gray-300 rounded" />
+                <input type="text" name="name" id="name" placeholder="John Smith" required class="block w-full px-4 py-3 mt-1 placeholder-gray-300 rounded" />
                 @error('name')
                     <span class="inline-block mt-2 text-red-400">{{ $message }}</span>
                 @enderror
@@ -15,7 +15,7 @@
 
             <div>
                 <label for="email">Email</label>
-                <input type="email" name="email" id="email" placeholder="johnsmith@example.com" class="block w-full px-4 py-3 mt-1 placeholder-gray-300 rounded" />
+                <input type="email" name="email" id="email" placeholder="johnsmith@example.com" required class="block w-full px-4 py-3 mt-1 placeholder-gray-300 rounded" />
                 @error('email')
                     <span class="inline-block mt-2 text-red-400">{{ $message }}</span>
                 @enderror
@@ -23,7 +23,7 @@
 
             <div>
                 <label for="password">Password</label>
-                <input type="password" name="password" id="password" class="block w-full px-4 py-3 mt-1 placeholder-gray-300 rounded" />
+                <input type="password" name="password" id="password" required class="block w-full px-4 py-3 mt-1 placeholder-gray-300 rounded" />
                 @error('password')
                     <span class="inline-block mt-2 text-red-400">{{ $message }}</span>
                 @enderror
@@ -31,15 +31,15 @@
 
             <div>
                 <label for="password-confirmation">Password Confirmation</label>
-                <input type="password" name="password_confirmation" id="password-confirmation" class="block w-full px-4 py-3 mt-1 placeholder-gray-300 rounded" />
+                <input type="password" name="password_confirmation" id="password-confirmation" required class="block w-full px-4 py-3 mt-1 placeholder-gray-300 rounded" />
                 @error('password_confirmation')
                     <span class="inline-block mt-2 text-red-400">{{ $message }}</span>
                 @enderror
             </div>
 
-            <button class="px-4 py-3 mt-4 font-semibold uppercase rounded-md bg-gradient-to-r from-blue-600 to-blue-700">
+            <x-forms.submit>
                 Register
-            </button>
+            </x-forms.submit>
         </form>
     </div>
 </x-app>

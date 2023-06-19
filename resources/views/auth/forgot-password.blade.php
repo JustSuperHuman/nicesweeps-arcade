@@ -7,15 +7,15 @@
 
             <div>
                 <label for="password">Password</label>
-                <input type="password" name="password" id="password" class="block w-full px-4 py-3 mt-1 text-gray-600 placeholder-gray-300 rounded" />
+                <input type="password" name="password" id="password" required class="block w-full px-4 py-3 mt-1 text-gray-600 placeholder-gray-300 rounded" />
                 @error('password')
                     <span class="inline-block mt-2 text-red-400">{{ $message }}</span>
                 @enderror
             </div>
 
-            <button class="px-4 py-3 mt-4 font-semibold uppercase rounded-md bg-gradient-to-r from-blue-600 to-blue-700">
+            <x-forms.submit>
                 Send password reset link
-            </button>
+            </x-forms.submit>
         </form>
     </div>
 </x-app>
