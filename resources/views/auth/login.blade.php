@@ -25,5 +25,9 @@
                 Log in
             </button>
         </form>
+
+        <p class="pt-8 mt-16 text-center border-t border-white/5">
+            <a href="{{ route('password.email') }}">I forgot my password.</a>
+        </p>
     </div>
 </x-app>
