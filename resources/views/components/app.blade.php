@@ -29,7 +29,10 @@
             <nav class="container max-w-screen-md py-8">
                 <ul class="flex items-center justify-end gap-16">
                     <li>
-                        <a href="{{ route('home') }}" class="@if (Route::is('home')) decoration-white/30 text-white underline underline-offset-8 @endif font-semibold text-current uppercase">
+                        <a
+                            href="{{ route('home') }}"
+                            class="font-semibold text-current uppercase"
+                        >
                             Home
                         </a>
                     </li>
@@ -39,20 +42,30 @@
                             <form method="POST" action="{{ route('logout') }}">
                                 @csrf
 
-                                <button class="@if (Route::is('login')) decoration-white/30 text-white underline underline-offset-8 @endif font-semibold text-current uppercase">
+                                <button class="font-semibold text-current uppercase">
                                     Log out
                                 </button>
                             </form>
                         </li>
                     @else
                         <li>
-                            <a href="{{ route('login') }}" class="@if (Route::is('login')) decoration-white/30 text-white underline underline-offset-8 @endif font-semibold text-current uppercase">
+                            <a
+                                href="{{ route('login') }}"
+                                class="font-semibold text-current uppercase"
+                            >
                                 Log in
                             </a>
                         </li>
 
                         <li>
-                            <a href="{{ route('register') }}" class="@if (Route::is('register')) decoration-white/30 text-white underline underline-offset-8 font-semibold text-current uppercase @else bg-gradient-to-b from-red-500 to-red-600 px-4 py-3 font-semibold uppercase rounded-md @endif">
+                            <a
+                                href="{{ route('register') }}"
+                                @if (Route::is('register'))
+                                    class="px-4 py-3 font-semibold uppercase rounded-md bg-white/5"
+                                @else
+                                    class="px-4 py-3 font-semibold uppercase rounded-md bg-gradient-to-b from-red-500 to-red-600"
+                                @endif
+                            >
                                 <span class="@if (! Route::is('register')) text-transparent bg-clip-text bg-gradient-to-b from-yellow-100 to-yellow-400 @endif">
                                     Register
                                 </span>
